@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import typing as t
+from typing import List
 from pathlib import Path
 from glob import glob
 
@@ -9,7 +9,7 @@ def main() -> None:
     update_templates(files)
 
 
-def find_html_files() -> t.List[Path]:
+def find_html_files() -> List[Path]:
     """
     Return all files ending in .html except the ones in the templates folder
     """
@@ -23,7 +23,7 @@ def find_html_files() -> t.List[Path]:
     return files
 
 
-def update_templates(files: t.List[Path]) -> None:
+def update_templates(files: List[Path]) -> None:
     templates = {}
 
     # Find all available templates
