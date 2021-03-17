@@ -43,9 +43,13 @@ def update_templates(files: List[Path]) -> None:
                 end = f"<!-- TEMPLATE {tpl_name.upper()} END -->"
 
                 offset = 0
-                while (offset := content.find(start, offset)) != -1:
+                while True:
+                    offset = content.find(start, offset)
+                    if offset == -1:
+                        break
                     offset += len(start)
-                    if (end_offset := content.find(end, offset)) != -1:
+                    end_offset = content.find(end, offset)
+                    if end_offset != -1:
                         content = content[:offset] + "\n" + tpl + content[end_offset:]
 
             f.seek(0)
