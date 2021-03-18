@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 from typing import List
 from pathlib import Path
-from glob import glob
+
+PROJECT_ROOT = Path(__file__).parent.parent.absolute()
 
 
 def main() -> None:
@@ -14,8 +15,8 @@ def find_html_files() -> List[Path]:
     Return all files ending in .html except the ones in the templates folder
     """
     files = []
-    for filepath in glob("../**/*.html", recursive=True):
-        path = Path(filepath)
+    for path in PROJECT_ROOT.glob("*.html"):
+        print(path)
         if path.parent.name == "templates":
             continue
         files.append(path)
@@ -27,7 +28,7 @@ def update_templates(files: List[Path]) -> None:
     templates = {}
 
     # Find all available templates
-    for filepath in glob("../templates/*.html"):
+    for filepath in PROJECT_ROOT.glob("templates/*.html"):
         path = Path(filepath)
         # Get filename without suffix
         template_name = path.with_suffix("").name
