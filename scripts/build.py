@@ -3,7 +3,7 @@ from typing import List
 import shutil
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).parent.parent.absolute()
+PROJECT_ROOT = Path(__file__).absolute().parent.parent
 OUTPUT = PROJECT_ROOT.joinpath("build")
 
 
