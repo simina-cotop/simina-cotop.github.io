@@ -1,0 +1,16 @@
+a, a:hover, a:focus {
+    color: #17a2b8;
+}
+
+a:visited {
+    color: #0f6775;
+}
+
+.navbar-light .navbar-nav .nav-link, .btn {
+	color: #17a2b8;
+}
+
+.list-group-item.active {
+	background-color: #0f6775;
+    color: white;
+}
