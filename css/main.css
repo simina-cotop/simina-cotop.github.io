@@ -10,6 +10,10 @@ a:visited {
 	color: #17a2b8;
 }
 
+.navbar-light .navbar-nav .nav-link:hover, .btn {
+	color: #0f6775;
+}
+
 .list-group-item.active {
 	background-color: #0f6775;
     color: white;
