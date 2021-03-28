@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from typing import List
 import shutil
+from datetime import datetime
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).absolute().parent.parent
@@ -31,6 +32,7 @@ def find_html_files() -> List[Path]:
 
 
 def update_templates(files: List[Path]) -> None:
+    last_modified = f"{datetime.now():%d-%m-%Y}"
     templates = {}
 
     # Find all available templates
@@ -58,6 +60,8 @@ def update_templates(files: List[Path]) -> None:
                     end_offset = content.find(end, offset)
                     if end_offset != -1:
                         content = content[:offset] + "\n" + tpl + content[end_offset:]
+
+            content = content.replace("<!-- LASTMODIFIED -->", last_modified)
 
             f.seek(0)
             f.write(content)
