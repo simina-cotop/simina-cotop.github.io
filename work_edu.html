@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<!-- TEMPLATE HEAD START -->
+	<!-- TEMPLATE HEAD START -->
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-	integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
 <!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <!-- Material Icons -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -22,8 +23,8 @@
 	<title>Work and Education</title>
 </head>
 
-<body data-spy="scroll" data-target="#page-navigation">
-<!-- TEMPLATE NAVBAR START -->
+<body data-bs-spy="scroll" data-bs-target="#page-navigation">
+	<!-- TEMPLATE NAVBAR START -->
 <header>
     <!-- Navigation Bar -->
 
@@ -76,43 +77,40 @@
 
 	<main class="container">
 		<div class="row">
-			<div class="container d-none d-lg-block" style="z-index: 2000;">
-				<div class="row col-3 position-fixed">
-					<div class="">
-						<div id="page-navigation" class="list-group">
-							<a class="list-group-item list-group-item-action" href="#work">
-								Work Experience
-							</a>
-							<a class="list-group-item list-group-item-action" href="#teaching">
-								Teaching
-							</a>
-							<a class="list-group-item list-group-item-action" href="#education">
-								Education
-							</a>
-							<a class="list-group-item list-group-item-action" href="#skills">
-								Skills
-							</a>
-							<a class="list-group-item list-group-item-action" href="#languages">
-								Languages
-							</a>
-							<a class="list-group-item list-group-item-action" href="#projects">
-								Projects
-							</a>
-						</div>
+			<div class="d-none d-lg-block col-lg-3">
+				<div class="sticky-top">
+					<div id="page-navigation" class="list-group">
+						<a class="list-group-item list-group-item-action" href="#work">
+							Work Experience
+						</a>
+						<a class="list-group-item list-group-item-action" href="#teaching">
+							Teaching
+						</a>
+						<a class="list-group-item list-group-item-action" href="#education">
+							Education
+						</a>
+						<a class="list-group-item list-group-item-action" href="#skills">
+							Skills
+						</a>
+						<a class="list-group-item list-group-item-action" href="#languages">
+							Languages
+						</a>
+						<a class="list-group-item list-group-item-action" href="#projects">
+							Projects
+						</a>
 					</div>
 				</div>
 			</div>
-
-			<div class="col-3 d-none d-lg-block"></div>
 			<div class="col-xs-12 col-lg-9">
 				<!-- Main Content -->
-				<div class="row justify-content-center">
+				<div class="row text-center">
 					<h1 class="text-info"><b>Work and Education</b></h1>
 				</div>
 
 				<!--Research Experience-->
-				<div class="row justify-content-center mt-5 mb-4">
-					<h2 id="work" class="text-info"><span class="material-icons user-select-none">school</span><b>&nbsp;Research Experience</b></h2>
+				<div class="row text-center mt-5 mb-4">
+					<h2 id="work" class="text-info"><span
+							class="material-icons user-select-none">school</span><b>&nbsp;Research Experience</b></h2>
 				</div>
 
 				<!-- Vera Demberg -->
@@ -129,9 +127,12 @@
 					<div class="col-md-8">
 						<h4>Scientific Employee</h4>
 						<ul>
-						<li> Developed a natural language generation model of bar chart descriptions in a few-shot setting.</li>
-						<li> Adapted an existing TensorFlow and Python codebase to work with a dataset of annotated bar chart descriptions. </li>
-						<li> Automatically measured the correctness and quality of the GPT-2 generated descriptions.</li>
+							<li> Developed a natural language generation model of bar chart descriptions in a few-shot
+								setting.</li>
+							<li> Adapted an existing TensorFlow and Python codebase to work with a dataset of annotated
+								bar chart descriptions. </li>
+							<li> Automatically measured the correctness and quality of the GPT-2 generated descriptions.
+							</li>
 						</ul>
 						<span class="bi-link-45deg">
 							<a href="https://www.uni-saarland.de/lehrstuhl/demberg.html" class="test">
@@ -153,7 +154,8 @@
 					</div>
 					<div class="col-md-8">
 						<h4>Student Assistant</h4>
-						<p> Proposed and analysed multiple strategies for extending the Signal messaging protocol to multiple devices while preserving its security guarantees.</p>
+						<p> Proposed and analysed multiple strategies for extending the Signal messaging protocol to
+							multiple devices while preserving its security guarantees.</p>
 						<span class="bi-link-45deg">
 							<a href="https://cispa.saarland/group/cremers/index.html">
 								https://cispa.saarland/group/cremers/index.html
@@ -185,8 +187,9 @@
 				<!--Work Experience-->
 
 				<!--Teaching Experience-->
-				<div class="row justify-content-center mt-5 mb-4">
-					<h2 id="teaching" class="text-info"><span class="material-icons user-select-none">book</span><b>&nbsp;Teaching Experience</b></h2>
+				<div class="row text-center mt-5 mb-4">
+					<h2 id="teaching" class="text-info"><span
+							class="material-icons user-select-none">book</span><b>&nbsp;Teaching Experience</b></h2>
 				</div>
 
 				<!-- Christian Rossow -->
@@ -201,7 +204,8 @@
 					</div>
 					<div class="col-md-8">
 						<h4><b>Tutor</b></h4>
-						<p> Organized and taught a weekly tutorial, which included the preparation and grading of minitests. Helped with exam preparation and grading.</p>
+						<p> Organized and taught a weekly tutorial, which included the preparation and grading of
+							minitests. Helped with exam preparation and grading.</p>
 						<span class="bi-link-45deg">
 							<a href="https://cispa.saarland/group/rossow/news">
 								https://cispa.saarland/group/rossow/news
@@ -223,7 +227,8 @@
 					<div class="col-md-8">
 						<h4><b>Student</b></h4>
 						<ul>
-							<li>Course work about Psycho-Pedagogical Training, how to organise lessons, and hands-on teaching experience.</li>
+							<li>Course work about Psycho-Pedagogical Training, how to organise lessons, and hands-on
+								teaching experience.</li>
 							<li>Taught high school students introduction to programming.</li>
 						</ul>
 					</div>
@@ -246,8 +251,9 @@
 				<!--Teaching Experience-->
 
 				<!--Education-->
-				<div class="row justify-content-center mt-5 mb-4">
-					<h2 id="education" class="text-info"><span class="material-icons user-select-none">school</span><b>&nbsp;Education</b></h2>
+				<div class="row text-center mt-5 mb-4">
+					<h2 id="education" class="text-info"><span
+							class="material-icons user-select-none">school</span><b>&nbsp;Education</b></h2>
 				</div>
 
 				<!-- MSc Computer Science -->
@@ -263,9 +269,12 @@
 					<div class="col-md-8">
 						<!--Figure out how to make \textsc{Grim}-->
 						<h4><b>Master in Computer Science</b></h4>
-						<p>Thesis: How to be Grim: explaining data at different granularity levels using patterns and structure functions</p>
+						<p>Thesis: How to be Grim: explaining data at different granularity levels using patterns and
+							structure functions</p>
 						<ul>
-							<li>Proposed two algorithms, Grim and Brim, which approximate Kolmogorov’s structure function. They find multiple, increasingly detailed explanations for a dataset, that provide a high-level view as well as an in-depth one.</li>
+							<li>Proposed two algorithms, Grim and Brim, which approximate Kolmogorov’s structure
+								function. They find multiple, increasingly detailed explanations for a dataset, that
+								provide a high-level view as well as an in-depth one.</li>
 							<li>Improved and extended an existing large codebase in C++.</li>
 						</ul>
 					</div>
@@ -285,8 +294,10 @@
 						<h4><b>Bachelor in Computer Science</b></h4>
 						<p>Thesis: The experimental analysis of several approximation algorithms</p>
 						<ul>
-							<li>Implemented multiple approximation algorithms in Python for solving the Set Cover and Vertex Cover problems.</li>
-							<li>Compared the results with an optimum solution outputted by the mathematical optimization solver Gurobi.</li>
+							<li>Implemented multiple approximation algorithms in Python for solving the Set Cover and
+								Vertex Cover problems.</li>
+							<li>Compared the results with an optimum solution outputted by the mathematical optimization
+								solver Gurobi.</li>
 						</ul>
 					</div>
 				</div>
@@ -306,15 +317,17 @@
 						<p>Thesis: People and books</p>
 						<ul>
 							<li>Course work about Art in general and Photography in particular.</li>
-							<li>The final thesis consisted of a series of photographs depicting people reading their chosen books.</li>
+							<li>The final thesis consisted of a series of photographs depicting people reading their
+								chosen books.</li>
 						</ul>
 					</div>
 				</div>
 				<!--Education-->
 
 				<!-- Skills-->
-				<div class="row justify-content-center mt-5 mb-4">
-					<h2 id="skills" class="text-info"><span class="material-icons user-select-none">psychology</span><b>&nbsp;Technical Skills</b></h2>
+				<div class="row text-center mt-5 mb-4">
+					<h2 id="skills" class="text-info"><span
+							class="material-icons user-select-none">psychology</span><b>&nbsp;Technical Skills</b></h2>
 				</div>
 
 				<div class="row">
@@ -357,8 +370,9 @@
 				<!-- Skills-->
 
 				<!-- Languages -->
-				<div class="row justify-content-center mt-5 mb-4">
-					<h2 id="languages" class="text-info"><span class="material-icons user-select-none">language</span><b>&nbsp;Languages</b></h2>
+				<div class="row text-center mt-5 mb-4">
+					<h2 id="languages" class="text-info"><span
+							class="material-icons user-select-none">language</span><b>&nbsp;Languages</b></h2>
 				</div>
 
 				<div class="row row-cols-2">
@@ -371,20 +385,31 @@
 				<!-- Languages -->
 
 				<!-- Projects -->
-				<div class="row justify-content-center mt-5 mb-4">
-					<h2 id="projects" class="text-info"><span class="material-icons user-select-none">build</span><b>&nbsp;Projects</b></h2>
+				<div class="row text-center mt-5 mb-4">
+					<h2 id="projects" class="text-info"><span
+							class="material-icons user-select-none">build</span><b>&nbsp;Projects</b></h2>
 				</div>
 
 
-				<div class="jumbotron row">
-					<h5 class="display-5">NLG of Bar Chart Descriptions in a Few-Shot Setting</h5>
+				<div class="container-fluid row bg-light">
+					<h4>NLG of Bar Chart Descriptions in a Few-Shot Setting</h4>
 					<p class="lead">I created an approach for generating bar chart descriptions
 						automatically. Since there are few datasets available for training which contain bar chart
-						descriptions, a secondary goal was to do this with a small training set. Thus, I developed a natural language generation model of bar chart descriptions in a few-shot setting. This included adapting an existing TensorFlow and Python codebase to work with a dataset of annotated bar chart descriptions. I also proposed an automatic measure for computing the correctness and quality of the GPT-2 generated descriptions.</p>
+						descriptions, a secondary goal was to do this with a small training set. Thus, I developed a
+						natural language generation model of bar chart descriptions in a few-shot setting. This included
+						adapting an existing TensorFlow and Python codebase to work with a dataset of annotated bar
+						chart descriptions. I also proposed an automatic measure for computing the correctness and
+						quality of the GPT-2 generated descriptions.</p>
 				</div>
-				<div class="jumbotron row">
-					<h5 class="display-5">How to be Grim: explaining data at different granularity levels using patterns and structure functions</h5>
-					<p class="lead">The focus of my Master's Thesis was finding out whether it is more beneficial to analyse a dataset via multiple models, instead of just a single one. By using Kolmogorov’s structure function we can not only order these on how well they explain the data, but also identify those that are worth looking into. Thus, I created two algorithms, Grim and Brim, for finding these models and through many experiments showed that the algorithms output high-quality, high-level, as well as in-depth explanations.</p>
+				<div class="container-fluid row bg-light">
+					<h4>How to be Grim: explaining data at different granularity levels using patterns
+						and structure functions</h4>
+					<p class="lead">The focus of my Master's Thesis was finding out whether it is more beneficial to
+						analyse a dataset via multiple models, instead of just a single one. By using Kolmogorov’s
+						structure function we can not only order these on how well they explain the data, but also
+						identify those that are worth looking into. Thus, I created two algorithms, Grim and Brim, for
+						finding these models and through many experiments showed that the algorithms output
+						high-quality, high-level, as well as in-depth explanations.</p>
 				</div>
 
 
@@ -395,9 +420,9 @@
 			</div> <!-- Main Content -->
 		</div>
 
-<!-- TEMPLATE CONTACTS START -->
+		<!-- TEMPLATE CONTACTS START -->
 <footer id="contact">
-    <div class="row justify-content-center">
+    <div class="row text-center">
         <h2 class = "text-info"> Contact</h2>
     </div>
 
@@ -410,17 +435,17 @@
         <div class="col bi-link-45deg"><a target="_blank" rel="noopener noreferrer" href="https://letterboxd.com/Simina09/"> Letterboxd</a></div>
     </div>
     <div class ="row justify-content-center">
-		© Simina Cotop 2021 | Last Updated: 27-06-2025
+		© Simina Cotop 2021 | Last Updated: 28-06-2025
 	</div>
 </footer>
 <!-- TEMPLATE CONTACTS END -->
 
-<!-- TEMPLATE BOOTSTRAP-FOOTER START -->
+		<!-- TEMPLATE BOOTSTRAP-FOOTER START -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
 <!-- TEMPLATE BOOTSTRAP-FOOTER END -->
 
