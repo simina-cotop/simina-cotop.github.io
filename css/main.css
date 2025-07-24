@@ -1,3 +1,8 @@
+:root {
+    --bs-info-rgb: 23, 162, 184;
+    --bs-info: #17a2b8;
+}
+
 a, a:hover, a:focus {
     color: #0dcaf0;
 }
