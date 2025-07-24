@@ -7,11 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-	integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
 <!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <!-- Material Icons -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -22,7 +22,7 @@
 	<title>Hobbies and Interests</title>
 </head>
 
-<body data-spy="scroll" data-target="#page-navigation">
+<body data-bs-spy="scroll" data-bs-target="#page-navigation">
 <!-- TEMPLATE NAVBAR START -->
 <header>
     <!-- Navigation Bar -->
@@ -76,9 +76,9 @@
 
 	<main class="container">
 		<div class="row">
-			<div class="container position-fixed d-none d-lg-block" style="z-index: 2000;">
-				<div class="row">
-					<div id="page-navigation" class="list-group col-sm-3">
+			<div class="col-3 d-none d-lg-block">
+				<div class="sticky-top">
+					<div id="page-navigation" class="list-group">
 						<a class="list-group-item list-group-item-action" href="#books">
 							Books
 						</a>
@@ -92,26 +92,24 @@
 					<div class="col-sm-9"></div>
 				</div>
 			</div>
-
-			<div class="col-3 d-none d-lg-block"></div>
 			<div class="col-xs-12 col-lg-9">
 				<!-- Main Content -->
-				<div class="row justify-content-center">
-					<h1 class="text-info"><b>Hobbies and Interests</b></h1>
+				<div class="row">
+					<h1 class="text-info text-center"><b>Hobbies and Interests</b></h1>
 				</div>
 
 				<!--TODO: figure out how to open links in a new tab-->
 				<!-- Books -->
-				<div class="row justify-content-center mb-4">
-					<h2 id="books" class="text-info"><b>Books</b></h2>
+				<div class="row mb-4">
+					<h2 id="books" class="text-info text-center"><b>Books</b></h2>
 					<br>
-					<p class = "justify-content-center">
-						Ever since I was 10 years old when I first read Harry Potter and the Philosopher's Stone I fell in love with reading and books. In highschool I read a lot of classics, followed by contemporary books later on. 
+					<p>
+						Ever since I was 10 years old when I first read Harry Potter and the Philosopher's Stone I fell in love with reading and books. In highschool I read a lot of classics, followed by contemporary books later on.
 					</p>
 
 
-					<p class = " text-center"> My current (as of June 2025) favorite books are:
-						<div class="row row-cols-3">
+					<p> My current (as of June 2025) favorite books are:
+						<div class="row row-cols-4">
 							<div class="col">
 								<img class="img-fluid" height="auto" src="https://cdn.thestorygraph.com/2pjxw2jlig7eyojynrx09raa1q3u" alt = "The Thursday Murder Club"/>
 							</div>
@@ -121,7 +119,7 @@
 							</div>
 
 							<div class="col">
-								<img class="img-fluid" height="auto" src="https://assets.thalia.media/img/artikel/95c890165cbfe3c77ec1fb47c6113977469399e8-00-00.jpeg" alt = "The Midnight Library"/>
+								<img class="img-fluid" height="auto" src="https://cdn.thestorygraph.com/5e89ocpgoi6weau4ivsh3zg1jam8" alt = "The Midnight Library"/>
 							</div>
 
 							<div class="col">
@@ -137,19 +135,19 @@
 
 				<!--TODO: make all of them fit-->
 				<!-- Movies -->
-				<div class="row justify-content-center">
-					<h2 id="movies" class="text-info"><b>Movies</b></h2>
+				<div class="row">
+					<h2 id="movies" class="text-info text-center"><b>Movies</b></h2>
 
 				<p>
 					With over 1600 movies seen so far, I consider myself a movie buff. I enjoy talking about movies, watching them and learning about how they are made and about the crew involved in making them. I combine my love for movies with the one for lists and I usually watch movies which I find on one list or another, or choose one of my favorite actors and directors and binge-watch their movies. On my <a target="_blank" rel="noopener noreferrer" href="https://letterboxd.com/Simina09/"> Letterboxd </a> account you can find my all my movies and my movie lists.
 				</p>
-				<p class = "text-center"> My current (as of March 2021) favorite movies are:
-					<div class="row row-cols-5">
+				<p> My current (as of March 2021) favorite movies are:
+					<div class="row row-cols-4">
 						<div class="col">
 							<img class="img-fluid" height="10" src="https://m.media-amazon.com/images/M/MV5BMDBkZDNjMWEtOTdmMi00NmExLTg5MmMtNTFlYTJlNWY5YTdmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt = "Top Gun: Maverick"/>
 						</div>
 						<div class="col">
-							<img class="img-fluid" height="auto" src="https://upload.wikimedia.org/wikipedia/en/c/cd/The_Secret_Life_of_Walter_Mitty_poster.jpg" alt = "The Secret Life of Walter Mitty"/>
+							<img class="img-fluid" height="auto" src="https://upload.wikimedia.org/wikipedia/en/f/f2/The_Secret_Life_of_Walter_Mitty_2013_poster.jpg" alt = "The Secret Life of Walter Mitty"/>
 						</div>
 						<div class="col">
 							<img class="img-fluid" height="auto" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Good_Will_Hunting.png/250px-Good_Will_Hunting.png" alt = "Good Will Hunting"/>
@@ -167,11 +165,11 @@
 				<br>
 				<br>
 				<!-- Movie Blog -->
-				<div class="row justify-content-center">
-					<h2 id="blog" class="text-info"><b>Movie Blog</b></h2>
+				<div class="row">
+					<h2 id="blog" class="text-info text-center"><b>Movie Blog</b></h2>
 				</div>
 
-				<div class="row justify-content-center">
+				<div class="row">
 					<p> Coming Soon! </p>
 				</div>
 
@@ -187,20 +185,20 @@
 
 <!-- TEMPLATE CONTACTS START -->
 <footer id="contact">
-    <div class="row justify-content-center">
-        <h2 class = "text-info"> Contact</h2>
+    <div class="row text-center">
+        <h2 class="text-info">Contact</h2>
     </div>
 
     <div class="row row-cols-3 list-group-flush mb-5 text-info">
-        <div class="col bi-envelope-fill"><a target="_blank" rel="noopener noreferrer" href="mailto:mail@simina-cotop.de"> Mail</a></div>
-        <div class="col bi-linkedin"><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/simina-cotop"> LinkedIn</a></div>
-        <div class="col bi-twitter"><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/siminacotop"> @siminacotop</a></div>
-        <div class="col bi-github"><a target="_blank" rel="noopener noreferrer" href="https://github.com/simina-cotop"> simina-cotop</a></div>
-        <div class="col bi-link-45deg"><a target="_blank" rel="noopener noreferrer" href="https://www.goodreads.com/simina09"> Goodreads</a></div>
-        <div class="col bi-link-45deg"><a target="_blank" rel="noopener noreferrer" href="https://letterboxd.com/Simina09/"> Letterboxd</a></div>
+        <div class="col bi-envelope-fill"><a class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer" href="mailto:mail@simina-cotop.de"> Mail</a></div>
+        <div class="col bi-linkedin"><a class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/simina-cotop"> LinkedIn</a></div>
+        <div class="col bi-twitter"><a class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer" href="https://twitter.com/siminacotop"> @siminacotop</a></div>
+        <div class="col bi-github"><a class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer" href="https://github.com/simina-cotop"> simina-cotop</a></div>
+        <div class="col bi-link-45deg"><a class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer" href="https://app.thestorygraph.com/profile/simina09"> The StoryGraph </a></div>
+        <div class="col bi-link-45deg"><a class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer" href="https://letterboxd.com/Simina09/"> Letterboxd</a></div>
     </div>
-    <div class ="row justify-content-center">
-		© Simina Cotop 2021 | Last Updated: 27-06-2025
+    <div class="row justify-content-center">
+		© Simina Cotop 2025 | Last Updated: 24-07-2025
 	</div>
 </footer>
 <!-- TEMPLATE CONTACTS END -->
@@ -209,8 +207,8 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
 <!-- TEMPLATE BOOTSTRAP-FOOTER END -->
 
