@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from typing import List
 import shutil
 from datetime import datetime
 from pathlib import Path
@@ -18,7 +17,7 @@ def main() -> None:
     create_build_output(files)
 
 
-def find_html_files() -> List[Path]:
+def find_html_files() -> list[Path]:
     """
     Return all files ending in .html except the ones in the templates folder.
     """
@@ -31,7 +30,7 @@ def find_html_files() -> List[Path]:
     return files
 
 
-def update_templates(files: List[Path]) -> None:
+def update_templates(files: list[Path]) -> None:
     last_modified = f"{datetime.now():%d-%m-%Y}"
     templates = {}
 
@@ -69,7 +68,7 @@ def update_templates(files: List[Path]) -> None:
             f.truncate()
 
 
-def create_build_output(html_files: List[Path]) -> None:
+def create_build_output(html_files: list[Path]) -> None:
     OUTPUT.mkdir()
     for folder in ["css", "images"]:
         shutil.copytree(PROJECT_ROOT.joinpath(folder), OUTPUT.joinpath(folder))
