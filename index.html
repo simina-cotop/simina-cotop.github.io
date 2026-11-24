@@ -15,11 +15,66 @@
 <!-- Material Icons -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<!-- Your file css -->
+<!-- Custom CSS with modern styling -->
 <link rel="stylesheet" href="/css/main.css" />
 <!-- TEMPLATE HEAD END -->
 
-	<title>Simina Ana Cotop</title>
+	<title>Simina Ana Cotop - Software Engineer & Data Scientist</title>
+
+<script>
+// Smooth scroll animations and interactions
+document.addEventListener('DOMContentLoaded', function() {
+    // Add fade-in animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe sections
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+
+    // Add ripple effect to buttons
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const ripple = document.createElement('span');
+            const size = Math.max(rect.width, rect.height);
+            ripple.style.position = 'absolute';
+            ripple.style.borderRadius = '50%';
+            ripple.style.transform = 'scale(0)';
+            ripple.style.pointerEvents = 'none';
+            ripple.style.backgroundColor = 'rgba(255, 255, 255, 0.4)';
+            ripple.style.width = ripple.style.height = `${size}px`;
+            ripple.style.left = `${x - size/2}px`;
+            ripple.style.top = `${y - size/2}px`;
+
+            this.style.position = 'relative';
+            this.style.overflow = 'hidden';
+            this.appendChild(ripple);
+
+            setTimeout(() => {
+                ripple.style.transform = 'scale(4)';
+                setTimeout(() => ripple.remove(), 600);
+            }, 10);
+        });
+    });
+});
+</script>
 </head>
 
 
@@ -28,14 +83,14 @@
 <header>
     <!-- Navigation Bar -->
 
-    <nav class="navbar navbar-expand navbar-light bg-light mb-3 justify-content-end d-flex">
+    <nav class="navbar navbar-expand navbar-light mb-3 justify-content-end d-flex">
         <!-- Container wrapper -->
         <div class="container-fluid">
-            <span class="navbar-brand mr-auto">Simina Cotop</span>
+            <a href="index.html" class="navbar-brand mr-auto"><b>Simina Cotop</b></a>
 
             <!-- Toggle button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -43,93 +98,76 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="work_edu.html">Work & Education</a>
+                        <a class="nav-link" href="work_edu.html"><i class="bi bi-briefcase me-1"></i>Work & Education</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="hobbies.html">Hobbies & Interests</a>
+                        <a class="nav-link" href="hobbies.html"><i class="bi bi-star me-1"></i>Hobbies & Interests</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact"><i class="bi bi-envelope me-1"></i>Contact</a>
                     </li>
                 </ul>
 
                 <!-- Language Selector -->
-                <div class="dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 🇬🇧
+                <div class="dropdown ms-3">
+                    <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 🇬🇧
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#"> 🇬🇧 English</a>
                         <div class="dropdown-divider"></div>
-                        <!--<a class="dropdown-item" href="#"> 🇩🇪 Deutsch</a>-->
-                        <a class="dropdown-item"> 🇩🇪 Deutsch (coming soon)</a>
+                        <a class="dropdown-item text-secondary" href="#"> 🇩🇪 Deutsch (coming soon)</a>
                     </div>
                 </div>
                 <!-- Language Selector -->
             </div>
         </div> <!-- Container div -->
     </nav>
-</header>
-<!-- TEMPLATE NAVBAR END -->
+
 
 	<main class="container">
-		<section class="row text-center pt-3">
-			<div class="col-md-4">
-				<img class="img-fluid rounded-circle px-5" height="auto" src="images/profile-image.jpg" />
+		<section class="row profile-section text-center pt-4 pb-5" id="home">
+			<div class="col-md-3">
+				<img class="img-fluid rounded-circle profile-image" height="auto" src="images/profile-image.jpg" alt="Simina Cotop Profile"/>
 			</div>
-			<div class="col-md-8 align-self-center">
+			<div class="col-md-9 align-self-center">
 				<div class="row justify-content-center">
-					<h1 class = "text-info"><b>Hello, I am Simina Cotop!</b></h1>
+					<h1 class = "text-info fw-bold display-5"><b>Hello, I am Simina Cotop!</b></h1>
+					<p class="lead text-muted mb-4" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+						Senior Software Engineer transitioning to Data Science, combining engineering excellence with analytical thinking.
+						Specializing in building reliable systems and advanced data manipulation techniques. Currently exploring machine learning applications
+						to solve real-world problems while maintaining best practices in code quality and system architecture.
+					</p>
+					<div class="d-flex justify-content-center gap-3 flex-wrap">
+						<a href="work_edu.html" class="btn btn-primary rounded-pill px-4 py-2">View My Work</a>
+						<a href="hobbies.html" class="btn btn-outline-secondary rounded-pill px-4 py-2">My Interests</a>
+					</div>
 				</div>
-				<p>Experienced Software Engineer transitioning to a Data Scientist role, bringing a background in building reliable systems and data manipulation. Proficient in Python and SQL with foundational knowledge in machine learning principles and statistical analysis. Aiming to merge engineering best practices with data analysis skills.</p>
 			</div>
 		</section>
 
-		<hr>
-
-		<section class="row" id="experience">
-
-			<div class="col-md-8">
-				<h2 class="text-center text-info"><b>Work Experience and Education</b></h2>
-				<p> I hold a Master degree in Computer Science, as well as two Bachelor degrees, one in Computer Science and the other one in Photography. Throughout my studies I have worked on various scientific projects in the fields of Security, Data Mining, Information Theory and Natural Language Processing. You can find out more information here:</p>
-				<p class="text-center">
-					<a class="btn btn-outline-info btn-sm" href="work_edu.html#work" role="button"><b>Work</b></a>
-					<a class="btn btn-outline-info btn-sm" href="work_edu.html#education"
-						role="button"><b>Education</b></a>
-					<a class="btn btn-outline-info btn-sm" href="work_edu.html#skills" role="button"><b>Technical
-						Skills</b></a>
-					<a class="btn btn-outline-info btn-sm" href="work_edu.html#languages"
-						role="button"><b>Languages</b></a>
-					<a class="btn btn-outline-info btn-sm" href="work_edu.html#projects"
-						role="button"><b>Projects</b></a>
-
+		<section class="row mt-4" id="experience">
+			<div class="col-md-10">
+				<h2 class="text-center text-info"><b style="font-size: 2rem;">Work Experience & Education Timeline</b></h2>
+				<p class="lead text-muted mx-auto" style="max-width: 800px;">
+					I hold a Master's degree in Computer Science from Saarland University, along with Bachelor degrees in
+					Computer Science and Photography from West University of Timișoara. Throughout my academic journey,
+					I've worked on cutting-edge projects spanning Security, Data Mining, Information Theory, and Natural Language Processing.
 				</p>
 			</div>
-			<div class="col-md-4 d-flex justify-content-center">
-                <!-- No image for small, 1 image for medium/large, 2 images for extra large -->
-				<span style="font-size: 170px;" class="material-icons user-select-none d-none d-md-inline">work</span>
-				<span style="font-size: 170px;" class="material-icons user-select-none d-none d-xl-inline">school</span>
-			</div>
 		</section>
 
-		<hr>
-
-		<section class="row" id="hobbies">
-			<div class="col-md-4 d-flex justify-content-center">
-				<span style="font-size: 170px;" class="material-icons user-select-none d-none d-md-inline">menu_book</span>
-				<span style="font-size: 170px;" class="material-icons user-select-none d-none d-xl-inline">theaters</span>
+		<section class="row mt-5" id="hobbies">
+			<div class="col-md-2 d-flex justify-content-center align-items-center">
+				<span style="font-size: 80px;" class="material-icons text-primary user-select-none">library_books</span>
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-10">
 				<h2 class="text-center text-info"><b>Hobbies and Interests</b></h2>
-				<p>In my spare time, I love watching movies and learning about how they are made, the directors, actors and cinematographers. I also enjoy reading and like to keep
-					lists of everything I consume. Find out more here:</p>
-				<p class="text-center">
-					<a class="btn btn-outline-info btn-sm" href="hobbies.html#books" role="button"><b>Books</b></a>
-					<a class="btn btn-outline-info btn-sm" href="hobbies.html#movies" role="button"><b>Movies</b></a>
-				</p>
+				<p>In my spare time, I explore film theory and cinematography techniques. I maintain detailed lists
+				of books, movies, and series I've consumed, helping me discover new works in my preferred genres.</p>
 			</div>
 		</section>
 
@@ -138,19 +176,51 @@
 <!-- TEMPLATE CONTACTS START -->
 <footer id="contact">
     <div class="row text-center">
-        <h2 class="text-info">Contact</h2>
+        <h2 class="text-info"><b>Get in Touch</b></h2>
+        <p class="lead text-muted mx-auto" style="max-width: 600px;">Feel free to reach out for collaborations, discussions about tech trends, 
+        or recommendations for your next favorite movie!</p>
     </div>
 
-    <div class="row row-cols-3 list-group-flush mb-5 text-info">
-        <div class="col bi-envelope-fill"><a class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer" href="mailto:mail@simina-cotop.de"> Mail</a></div>
-        <div class="col bi-linkedin"><a class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/simina-cotop"> LinkedIn</a></div>
-        <div class="col bi-twitter"><a class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer" href="https://twitter.com/siminacotop"> @siminacotop</a></div>
-        <div class="col bi-github"><a class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer" href="https://github.com/simina-cotop"> simina-cotop</a></div>
-        <div class="col bi-link-45deg"><a class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer" href="https://app.thestorygraph.com/profile/simina09"> The StoryGraph </a></div>
-        <div class="col bi-link-45deg"><a class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer" href="https://letterboxd.com/Simina09/"> Letterboxd</a></div>
+    <div class="row row-cols-2 justify-content-center mt-4">
+        <div class="col">
+            <a href="mailto:mail@simina-cotop.de" class="list-group-item d-flex align-items-center gap-3">
+                <span class="bi-envelope fs-4 text-primary"><i class="material-icons" style="font-size: 28px;">email</i></span>
+                <div>
+                    <small class="text-muted">Email</small><br>
+                    <strong class="text-dark">simina-cotop.de</strong>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://www.linkedin.com/in/simina-cotop" target="_blank" rel="noopener noreferrer" class="list-group-item d-flex align-items-center gap-3">
+                <span class="bi-linkedin fs-4 text-primary"><i class="material-icons" style="font-size: 28px;">work</i></span>
+                <div>
+                    <small class="text-muted">LinkedIn</small><br>
+                    <strong class="text-dark">@simina-cotop</strong>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://github.com/simina-cotop" target="_blank" rel="noopener noreferrer" class="list-group-item d-flex align-items-center gap-3">
+                <span class="bi-github fs-4 text-primary"><i class="material-icons" style="font-size: 28px;">code</i></span>
+                <div>
+                    <small class="text-muted">GitHub</small><br>
+                    <strong class="text-dark">@simina-cotop</strong>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://letterboxd.com/Simina09/" target="_blank" rel="noopener noreferrer" class="list-group-item d-flex align-items-center gap-3">
+                <span class="bi-film fs-4 text-primary"><i class="material-icons" style="font-size: 28px;">movie</i></span>
+                <div>
+                    <small class="text-muted">Letterboxd</small><br>
+                    <strong class="text-dark">Simina09</strong>
+                </div>
+            </a>
+        </div>
     </div>
-    <div class="row justify-content-center">
-		© Simina Cotop 2025 | Last Updated: 24-07-2025
+    <div class="row justify-content-center mt-3">
+		© Simina Cotop | Portfolio • Resume • Projects
 	</div>
 </footer>
 <!-- TEMPLATE CONTACTS END -->
